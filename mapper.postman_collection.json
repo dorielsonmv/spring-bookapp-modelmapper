@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "9eea3662-0602-44dc-bf5e-75c9c0a32b63",
+		"name": "mapper2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44230443",
+		"_collection_link": "https://dmv-7574583.postman.co/workspace/dmv's-Workspace~750c5fd0-e940-4863-8d05-b9cf7727e54b/collection/44230443-9eea3662-0602-44dc-bf5e-75c9c0a32b63?action=share&source=collection_link&creator=44230443"
+	},
+	"item": [
+		{
+			"name": "adicionar book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n    {\n        \"title\":\"Java in action\",\n        \"author\": \"Kathy\",\n        \"price\":900\n\n    }\n    {\n        \"title\":\"Head First Java\",\n        \"author\": \"Kathy\",\n        \"price\":700\n\n    }\n// add uma de cada vez",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/books",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all Book",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/books",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list by author",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/books/author/kathy",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"books",
+						"author",
+						"kathy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list by Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/books/bookId/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"books",
+						"bookId",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
